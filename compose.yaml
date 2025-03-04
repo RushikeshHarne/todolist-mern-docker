@@ -9,6 +9,8 @@ services:
       - /usr/src/app/node_modules
     container_name: frontend
     restart: always
+    environment:
+       DANGEROUSLY_DISABLE_HOST_CHECK:  "true"
     networks:
       - react-express
     depends_on:
